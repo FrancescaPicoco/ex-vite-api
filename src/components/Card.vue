@@ -1,16 +1,24 @@
 <script>
+import { store } from "../store.js"
+
 export default{
+    data() {
+		return {
+			store,
+		}
+	},
     props: {
-        details: Object
-    }
+        details : Object
+    },
+   
 }
 </script>
 
 <template>   
     <div class="card">
         <div>IMMAGINE</div>
-        <h3>{{ details.name }}</h3>
-        <p>{{ details.phone }}</p>      
+        <h3>{{ store.name }}</h3>
+        <p>{{ store.phone }}</p>      
     </div>  
 </template>
 

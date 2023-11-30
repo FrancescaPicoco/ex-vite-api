@@ -1,13 +1,14 @@
 <script>
 import Card from './Card.vue'
+import { store } from "../store.js"
 export default{
     nome:"Content",
     components:{
         Card
     },
     data(){
-        return{
-            
+        return{  
+            store         
         }
     }
 }
@@ -15,7 +16,7 @@ export default{
 
 <template>
     <div id="wrapper">
-        <Card v-for="birra in store.birre" :details="birra" />
+        <Card />
     </div>
 </template>
 
@@ -27,6 +28,6 @@ export default{
     margin-right: auto;
     margin-left: auto;
     padding: 3rem;
-    background-color: blueviolet;
+    background-color: rgb(45, 13, 76);
 } 
 </style> 

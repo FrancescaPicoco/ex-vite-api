@@ -1,37 +1,35 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
-import AppFooter from './components/AppFooter.vue'
 import Content from './components/Content.vue'
 import axios from "axios";
-import { store } from "./components/store.js"
+import { store } from "./store.js"
 
 export default {
 	components: {
 		AppHeader,
-    AppFooter,
+		Content,
 	},
 	data() {
 		return {
 			store,
 		}
 	},
-  mounted() {
+    mounted() {
 		this.getBeers();
 	},
-  methods: {
+    methods: {
     getBeers(){
       axios.get(this.store.url).then(r =>{
         console.log(r.data)
       });
     }
-  }
+   }
 }
 </script>
 
 <template>
  <AppHeader/>
  <Content />
- <AppFooter />
 </template>
 
 <style scoped>
