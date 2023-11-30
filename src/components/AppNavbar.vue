@@ -9,5 +9,7 @@ export default{
 </template>
 
 <style scoped>
-
+a{
+    margin: 0.3rem;
+}
 </style>

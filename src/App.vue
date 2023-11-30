@@ -21,6 +21,7 @@ export default {
     getBeers(){
       axios.get(this.store.url).then(r =>{
         console.log(r.data)
+		this.store.beers = r.data.result
       });
     }
    }
