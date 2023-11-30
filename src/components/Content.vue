@@ -8,7 +8,7 @@ export default{
     },
     data(){
         return{  
-            store         
+            store,         
         }
     }
 }
@@ -16,7 +16,7 @@ export default{
 
 <template>
     <div id="wrapper">
-        <Card />
+        <Card v-for="beer in store" :details="beer"/>
     </div>
 </template>
 
