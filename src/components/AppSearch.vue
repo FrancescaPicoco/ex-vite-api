@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios';
 import { store } from "../store.js";
 export default {
     name: "AppSearch",
@@ -9,6 +10,12 @@ export default {
     },
     methods: {
         search() {
+            let indirizzo= ` https://api.openbrewerydb.org/v1/breweries?by_country=austria&by_name=${this.store.AppSearch}&per_pag=10`
+            // let indirizzo = `${this.store.url}&name=${this.store.searchBar}`
+            
+		    axios.get(indirizzo).then(r=>{
+			  this.store.beers = r.data.name;				
+		    });
             console.log("Cerca: ", this.store.searchBar);
             this.$emit("search")
         }

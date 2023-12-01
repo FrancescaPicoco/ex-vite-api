@@ -27,7 +27,9 @@ export default {
 			});
 		},	
 		getSearch(){
-		    let indirizzo = `${this.store.url}&name=${this.store.searchBar}`
+		    // let indirizzo = `${this.store.url}&name=${this.store.searchBar}`
+            let indirizzo= ` https://api.openbrewerydb.org/v1/breweries?by_country=austria&by_name=${this.store.AppSearch}&per_pag=10`
+			
 		    axios.get(indirizzo).then(r=>{
 			  this.store.beers = r.data.name;				
 		    });
