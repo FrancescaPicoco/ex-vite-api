@@ -1,9 +1,6 @@
 <script>
 export default{
-    props: {
-        details : Object
-    },
-     
+    props: ["details"]    
 }
 </script>
 
@@ -11,17 +8,23 @@ export default{
     <div class="card">
         <div>IMMAGINE</div>
         <h3>{{ details.name }}</h3>
-        <p>{{ details.phone }}</p>      
+        <p>{{ details.city }}</p> 
+        <p>{{ details.country }}</p>
+        <p>{{ details.phone }}</p>
+        <p>{{ details.adress_1 }}</p>
+        <p>{{ details.brewery_type }}</p>
+        <p>{{ details.state }}</p>   
+        <p>{{ details.state_province }}</p>     
+        <p>{{ details.street }}</p>       
     </div>  
 </template>
 
 <style scoped>
    .card{
-    width: calc((100% / 6) - 2rem);
-    height: 200px;
-    margin: 1rem;
+    width: calc((100% / 5) - 3rem);
+    margin: 1.5rem;
     background-color: slategray;
-    color: brown;
+    color: black;
    }
    img{
     width: 100%;

@@ -2,6 +2,7 @@
 import Card from './Card.vue'
 import { store } from "../store.js"
 export default{
+    //props: ["details"], 
     nome:"Content",
     components:{
         Card
@@ -16,7 +17,7 @@ export default{
 
 <template>
     <div id="wrapper">
-        <Card v-for="beer in store" :details="beer"/>
+        <Card v-for="beer in this.store.beers" :details="beer"/>
     </div>
 </template>
 

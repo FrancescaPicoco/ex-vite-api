@@ -1,4 +1,5 @@
 <script>
+
 import AppNavbar from './AppNavbar.vue';
 export default{
     components:{
@@ -32,7 +33,7 @@ export default{
             logo : "LOGO" 
 
         }
-    }
+    },
 }
 </script>
 
